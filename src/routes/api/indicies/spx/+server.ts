@@ -1,5 +1,10 @@
-import type {RequestHandler } from '@sveltejs/kit'
-import yahooFinance from 'yahoo-finance2'
+// /src/routes/api/indicies/spx/+server.ts
+import type { RequestHandler } from "@sveltejs/kit";
+// Use the npm build to avoid 'Deno is not defined' under Vite/Bun SSR
+import yahooFinance from "yahoo-finance2";
+
+// --- Type helpers derived from the runtime function signatures ---
+// (npm build doesn't expose /modules/* typings)
 type ChartOptions = NonNullable<Parameters<typeof yahooFinance.chart>[1]>;
 type ChartResult  = Awaited<ReturnType<typeof yahooFinance.chart>>;
 type Interval     = ChartOptions["interval"];
@@ -67,10 +72,10 @@ export const GET: RequestHandler = async ({ url, setHeaders }) => {
       ...(period2 !== undefined ? { period2 } : {})
     } as ChartOptions;
 
-    const res: ChartResult = await yahooFinance.chart("BTC-USD", opts);
+    const res: ChartResult = await yahooFinance.chart("^GSPC", opts);
 
     const out = {
-      symbol: "BTC-USD",
+      symbol: "^GSPC",
       meta: {
         currency: res.meta.currency,
         exchangeName: res.meta.exchangeName,

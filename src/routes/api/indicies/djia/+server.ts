@@ -67,10 +67,10 @@ export const GET: RequestHandler = async ({ url, setHeaders }) => {
       ...(period2 !== undefined ? { period2 } : {})
     } as ChartOptions;
 
-    const res: ChartResult = await yahooFinance.chart("BTC-USD", opts);
+    const res: ChartResult = await yahooFinance.chart("^DJI", opts);
 
     const out = {
-      symbol: "BTC-USD",
+      symbol: "^DJI",
       meta: {
         currency: res.meta.currency,
         exchangeName: res.meta.exchangeName,

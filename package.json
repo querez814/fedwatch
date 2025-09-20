@@ -40,7 +40,9 @@
 		"zod": "^4.1.9"
 	},
 	"dependencies": {
+		"@gadicc/yahoo-finance2": "npm:@jsr/gadicc__yahoo-finance2",
 		"danfojs": "^1.2.0",
-		"openai": "^5.22.0"
+		"openai": "^5.22.0",
+		"yahoo-finance2": "^2.13.3"
 	}
 }
