@@ -31,7 +31,7 @@ function presetToWindow(preset: string) {
 
 async function fetchAlphaVantageData(av_function: AVFunction, interval: Interval) {
   const BASE_URL = 'https://www.alphavantage.co/query';
-  const symbol = 'BTC';
+  const symbol = 'XRP';
   const market = 'USD';
   const apikey = VITE_ALPHA_VANTAGE;
 
@@ -119,7 +119,7 @@ export const GET: RequestHandler = async ({ url, setHeaders }) => {
     const parsedData = parseAlphaVantageData(avData, av_function, start);
 
     const out = {
-      symbol: "BTC-USD",
+      symbol: "XRP-USD",
       meta: parsedData.meta,
       interval,
       includePrePost,

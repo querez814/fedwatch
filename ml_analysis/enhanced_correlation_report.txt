@@ -1,0 +1,44 @@
+================================================================================
+ENHANCED LIQUIDITY CORRELATION ANALYSIS
+================================================================================
+
+1. LAGGED CORRELATIONS (Liquidity → Future Returns)
+--------------------------------------------------------------------------------
+
+Top 10 Lagged Features:
+                  Feature  Correlation  Abs_Correlation
+    tga_value_velocity_1m     0.312514         0.312514
+                tga_value     0.305026         0.305026
+           rrp_pct_change    -0.300896         0.300896
+    tga_value_velocity_2w     0.222545         0.222545
+  walcl_value_velocity_1m     0.191091         0.191091
+  walcl_value_velocity_2w     0.179571         0.179571
+         walcl_pct_change    -0.170270         0.170270
+           tga_pct_change    -0.149265         0.149265
+net_liquidity_velocity_1m    -0.120872         0.120872
+                rrp_value    -0.109041         0.109041
+
+
+2. REGIME-BASED CORRELATIONS (Bull vs Bear Markets)
+--------------------------------------------------------------------------------
+
+
+3. MULTI-TIMEFRAME CORRELATIONS
+--------------------------------------------------------------------------------
+
+WEEKLY_RETURN - Top 5:
+                Feature  Correlation  Abs_Correlation
+  tga_value_velocity_1m     0.312514         0.312514
+              tga_value     0.305026         0.305026
+  tga_value_velocity_2w     0.222545         0.222545
+walcl_value_velocity_1m     0.191091         0.191091
+walcl_value_velocity_2w     0.179571         0.179571
+
+
+4. KEY INSIGHTS
+--------------------------------------------------------------------------------
+
+✓ Best lagged predictor: tga_value_velocity_1m
+  Correlation: 0.313
+
+================================================================================

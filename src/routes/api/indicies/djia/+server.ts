@@ -25,7 +25,7 @@ function presetToWindow(preset: string) {
     case "1Y":  start.setFullYear(now.getFullYear() - 1); return makeWindow("1d", start, end);
     case "2Y":  start.setFullYear(now.getFullYear() - 2); return makeWindow("1wk", start, end);
     case "5Y":  start.setFullYear(now.getFullYear() - 5); return makeWindow("1mo", start, end);
-    case "MAX": return makeWindow("1mo", new Date(1970, 0, 1), end);
+    case "MAX": return makeWindow("1mo", new Date(2020, 0, 1), end);
     default:    return null ;
   }
 }
